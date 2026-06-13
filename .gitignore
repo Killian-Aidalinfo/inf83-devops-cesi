@@ -1,0 +1,8 @@
+# Windows download metadata
+*:Zone.Identifier
+
+# Node / Slidev
+node_modules/
+dist/
+.slidev/
+*.log

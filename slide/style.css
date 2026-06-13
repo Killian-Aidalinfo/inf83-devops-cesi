@@ -1,0 +1,139 @@
+/* ===========================================================
+   Identité visuelle CivilisationIT - https://civilisation-it.fr
+   Palette : fond blanc, texte bleu nuit, accent "feu" orange
+   =========================================================== */
+
+:root {
+  --civit-bg: #ffffff;
+  --civit-navy: #0b1220;
+  --civit-navy-soft: #f1f5f9;
+  --civit-blue: #0ea5e9;
+  --civit-blue-dark: #0369a1;
+  --civit-fire: #f97316;
+  --civit-fire-soft: #fb923c;
+  --civit-text: #0b1220;
+  --civit-muted: #64748b;
+
+  --slidev-theme-primary: var(--civit-blue);
+}
+
+/* Slide base */
+.slidev-layout {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: var(--civit-bg);
+  color: var(--civit-text);
+}
+
+.slidev-layout h1 {
+  background: linear-gradient(120deg, var(--civit-blue) 0%, var(--civit-fire) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h2 {
+  color: var(--civit-blue-dark);
+  font-weight: 700;
+  border-bottom: 2px solid var(--civit-fire);
+  padding-bottom: 0.15em;
+  display: inline-block;
+}
+
+.slidev-layout h3 {
+  color: var(--civit-fire);
+  font-weight: 600;
+}
+
+.slidev-layout table {
+  font-size: 0.85em;
+}
+
+.slidev-layout table th {
+  background: var(--civit-navy-soft);
+  color: var(--civit-blue-dark);
+}
+
+.slidev-layout blockquote {
+  border-left: 4px solid var(--civit-fire);
+  background: rgba(249, 115, 22, 0.06);
+  padding: 0.6em 1em;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Brand badge used on slides */
+.civit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.04em;
+  color: var(--civit-text);
+}
+
+.civit-badge .fire {
+  color: var(--civit-fire);
+}
+
+/* Footer brand bar shown on every slide via global-bottom.vue */
+.civit-footer {
+  position: fixed;
+  left: 1.2rem;
+  bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 11px;
+  color: var(--civit-muted);
+  opacity: 0.85;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.civit-footer .logo {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--civit-navy);
+}
+
+.civit-footer .logo .it {
+  color: var(--civit-fire);
+}
+
+.civit-footer .sep {
+  opacity: 0.5;
+}
+
+/* Section divider slides */
+.civit-section {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.14) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.12) 0%, transparent 50%),
+    #ffffff;
+}
+
+.civit-section h1 {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Callout boxes */
+.civit-callout {
+  border: 1px solid var(--civit-blue);
+  border-radius: 10px;
+  padding: 0.8em 1.2em;
+  background: rgba(14, 165, 233, 0.06);
+}
+
+.text-civit-blue {
+  color: var(--civit-blue-dark);
+}
+
+.civit-callout-fire {
+  border: 1px solid var(--civit-fire);
+  border-radius: 10px;
+  padding: 0.8em 1.2em;
+  background: rgba(249, 115, 22, 0.06);
+}
