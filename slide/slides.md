@@ -513,6 +513,28 @@ class: civit-section
 hideInToc: true
 ---
 
+# Une brève histoire du DevOps 🕰️
+
+Le DevOps est d'abord un **mouvement culturel**, né pour casser le mur entre Dev et Ops.
+
+<div class="text-sm">
+
+| Période | Étape | Idée clé |
+|---|---|---|
+| **1990–2000** | **Dev vs Ops** | Les devs écrivent le code, les ops déploient et maintiennent. Cycle en V, environnements différents → **conflits** et lenteur. |
+| **2001** | **Manifeste Agile** | Itérations courtes, collaboration, feedback rapide — adopté côté dev, mais l'**exploitation reste prudente** (stabilité de la prod). |
+| **2009** | **Naissance du DevOps** | Patrick Debois lance les *DevOpsDays* ; Flickr montre « **10 deploys/day** ». Objectif : livrer **plus vite, plus souvent, plus fiablement**. |
+
+</div>
+
+<div class="civit-callout-fire mt-4 text-sm">
+🏛️ <strong>Fondations</strong> : <strong>Lean</strong> (Toyota — réduire le gaspillage, amélioration continue), <strong>Agile</strong> (collaboration, livraison fréquente) et la culture <strong>SRE</strong> de Google (fiabilité mesurable, automatisation poussée).
+</div>
+
+---
+hideInToc: true
+---
+
 # CALMS comme grille de lecture
 
 <div class="text-sm">
