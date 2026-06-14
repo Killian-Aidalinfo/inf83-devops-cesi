@@ -559,6 +559,8 @@ hideInToc: true
 
 Les métriques DORA ne servent pas à classer les personnes, mais à comprendre un **système de livraison** <span class="opacity-50 text-sm">[S8]</span>.
 
+<div class="text-sm">
+
 | Métrique | Sens | Exemple de mesure débutante |
 |---|---|---|
 | Lead time for changes | Temps entre commit et déploiement. | Date du commit jusqu'au déploiement staging. |
@@ -566,7 +568,9 @@ Les métriques DORA ne servent pas à classer les personnes, mais à comprendre 
 | Change failure rate | Part des déploiements qui provoquent un incident. | Déploiements ayant nécessité rollback ou hotfix. |
 | Failed deployment recovery time | Temps pour récupérer après un échec. | Durée entre incident et restauration du service. |
 
-<div class="civit-callout-fire mt-4 text-sm">
+</div>
+
+<div class="civit-callout-fire mt-3 text-sm">
 <strong>Attention pédagogique.</strong> Une équipe débutante ne doit pas chercher « tout automatiser » le premier jour. Elle doit d'abord rendre visible son flux.
 </div>
 
