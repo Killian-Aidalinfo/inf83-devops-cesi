@@ -665,9 +665,7 @@ hideInToc: true
 
 # Pourquoi versionner ?
 
-Git est un système de gestion de versions **distribué**. Il enregistre les changements d'un ensemble de fichiers au fil du temps afin de pouvoir retrouver une version antérieure, comparer des changements et comprendre qui a modifié quoi <span class="opacity-50 text-sm">[S1][S2]</span>.
-
-Sans versioning, une équipe dépend de copies manuelles comme `projet_final_v2_vraiment_final.zip`.
+Git est un système de gestion de versions **distribué** : il garde l'évolution des fichiers pour **retrouver une version**, **comparer** et **savoir qui a changé quoi** <span class="opacity-50 text-sm">[S1][S2]</span>. Sans lui, on en revient au `projet_final_v2_vraiment_final.zip`.
 
 Avec Git, l'équipe obtient :
 
@@ -682,22 +680,55 @@ Avec Git, l'équipe obtient :
 </div>
 
 ---
-layout: image-right
-image: /images/schema_02_git_lifecycle.png
-backgroundSize: contain
 hideInToc: true
+class: gc-slide
 ---
 
-# Modèle mental Git pour débutants
+# Cycle de vie d'un changement avec Git
 
-Git distingue plusieurs zones :
+<div class="text-base opacity-60 -mt-1">Où se trouve chaque modification — du fichier modifié jusqu'au dépôt distant.</div>
 
-1. **Répertoire de travail** : fichiers visibles dans le dossier projet.
-2. **Index / staging area** : sélection des changements qui entreront dans le prochain commit.
-3. **Dépôt local** : historique de commits sur la machine.
-4. **Dépôt distant** : dépôt partagé sur GitHub ou un serveur interne.
+<div class="gc-wrap">
+<svg viewBox="0 0 1160 430" class="gc-svg">
+<defs><marker id="d" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#475569"/></marker><marker id="r" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#ef4444"/></marker><marker id="b" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker></defs>
+<line x1="236" y1="109" x2="302" y2="109" stroke="#475569" stroke-width="2" marker-end="url(#d)"/>
+<text x="269" y="58" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:13px;font-weight:700" fill="#334155">git add</text>
+<line x1="516" y1="109" x2="582" y2="109" stroke="#475569" stroke-width="2" marker-end="url(#d)"/>
+<text x="549" y="58" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:13px;font-weight:700" fill="#334155">git commit</text>
+<line x1="796" y1="109" x2="862" y2="109" stroke="#475569" stroke-width="2" marker-end="url(#d)"/>
+<text x="829" y="58" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:13px;font-weight:700" fill="#334155">git push</text>
+<rect x="24" y="70" width="212" height="78" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+<text x="130" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#0b1220">Répertoire de travail</text>
+<text x="130" y="120" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:12px;font-weight:500" fill="#475569">fichiers modifiés</text>
+<rect x="304" y="70" width="212" height="78" rx="12" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+<text x="410" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#0b1220">Zone d'index</text>
+<text x="410" y="120" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:12px;font-weight:500" fill="#475569">staging area</text>
+<rect x="584" y="70" width="212" height="78" rx="12" fill="#ffedd5" stroke="#f97316" stroke-width="2"/>
+<text x="690" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#0b1220">Dépôt local</text>
+<text x="690" y="120" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:12px;font-weight:500" fill="#475569">commits</text>
+<rect x="864" y="70" width="212" height="78" rx="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+<text x="970" y="100" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#0b1220">Dépôt distant</text>
+<text x="970" y="120" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:12px;font-weight:500" fill="#475569">GitHub</text>
+<path d="M 690,148 C 690,250 130,250 130,150" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#r)"/>
+<text x="410" y="268" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:12.5px;font-weight:700" fill="#dc2626">git restore / reset (à manier avec prudence)</text>
+<path d="M 970,148 C 970,212 690,212 698,150" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#b)"/>
+<text x="840" y="224" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:12.5px;font-weight:700" fill="#2563eb">git pull / fetch</text>
+<rect x="160" y="330" width="240" height="62" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="280" y="361" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#334155">Branche feature/*</text>
+<line x1="400" y1="361" x2="458" y2="361" stroke="#475569" stroke-width="2.4" marker-end="url(#d)"/>
+<rect x="460" y="330" width="240" height="62" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="580" y="361" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#334155">Pull request</text>
+<line x1="700" y1="361" x2="758" y2="361" stroke="#475569" stroke-width="2.4" marker-end="url(#d)"/>
+<rect x="760" y="330" width="240" height="62" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+<text x="880" y="361" text-anchor="middle" dominant-baseline="central" style="font-family:Inter,sans-serif;font-size:15px;font-weight:700" fill="#334155">main protégée</text>
+</svg>
+</div>
 
-<div class="text-xs opacity-60 mt-4">Schéma 2 - Cycle de vie Git</div>
+<style>
+.gc-slide h1 { font-size: 1.85rem; line-height: 1.1; }
+.gc-wrap { display:flex; justify-content:center; margin-top:0.6rem; }
+.gc-svg { width:100%; max-width:1000px; height:auto; display:block; }
+</style>
 
 ---
 hideInToc: true
