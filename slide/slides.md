@@ -93,7 +93,7 @@ hideInToc: true
 </div>
 
 <div class="text-sm opacity-60 mt-5">
-+ Annexes en fin de support : exercices, antisèches, erreurs fréquentes, glossaire, sources.
++ Annexes en fin de support : antisèches, erreurs fréquentes, glossaire, sources.
 </div>
 
 <style>
@@ -2628,101 +2628,7 @@ layout: section
 class: civit-section
 ---
 
-# 12. Exercices courts à insérer pendant le cours
-
----
-hideInToc: true
----
-
-# Quiz Git de 10 minutes
-
-<div class="civit-callout space-y-3 text-lg mt-6">
-
-1. Quelle commande montre les fichiers modifiés ?
-2. Quelle différence entre `git add` et `git commit` ?
-3. Pourquoi éviter de travailler directement sur `main` ?
-4. Qu'est-ce qu'un conflit ?
-5. Que contient un bon message de commit ?
-6. Pourquoi un tag est-il utile pour un déploiement ?
-
-</div>
-
----
-hideInToc: true
----
-
-# Atelier conflit Git
-
-**En binômes :**
-
-<div class="grid grid-cols-2 gap-4 pt-6">
-<div v-for="(step, i) in steps" :key="i" class="civit-callout py-3 px-4 text-sm">
-<span class="text-civit-blue font-bold">{{ i + 1 }}.</span> {{ step }}
-</div>
-</div>
-
-<div class="civit-callout-fire mt-8 text-sm">
-Débrief : comment éviter les conflits longs ?
-</div>
-
-<script setup>
-const steps = [
-  "Les deux apprenants modifient la même ligne d'un fichier.",
-  "L'un pousse sa modification.",
-  "L'autre tente de pousser, récupère, observe le conflit.",
-  "Le binôme résout le conflit ensemble.",
-]
-</script>
-
----
-hideInToc: true
----
-
-# Atelier pipeline cassée
-
-L'intervenant fournit une pipeline volontairement cassée :
-
-<div class="civit-callout-fire space-y-2 text-lg mt-6">
-
-- nom de stage incorrect ;
-- dépendance manquante ;
-- test qui échoue ;
-- variable non définie ;
-- image Docker non taguée.
-
-</div>
-
-<div class="civit-callout mt-6">
-<strong>Objectif :</strong> diagnostiquer à partir des logs, proposer une correction, créer un commit <code>fix(ci): ...</code>
-</div>
-
----
-hideInToc: true
----
-
-# Atelier incident
-
-**Scénario** : la version `v1.2.0` déployée en staging répond `500` sur `/api/orders`.
-
-### Travail demandé
-
-<div class="civit-callout space-y-2 text-lg mt-4">
-
-- reproduire ;
-- identifier le commit et l'image ;
-- consulter les logs ;
-- décider rollback ou hotfix ;
-- rédiger un ticket d'incident ;
-- proposer une amélioration de pipeline pour détecter plus tôt.
-
-</div>
-
----
-layout: section
-class: civit-section
----
-
-# 13. Antisèches
+# 12. Antisèches
 
 ---
 hideInToc: true
@@ -2808,7 +2714,7 @@ layout: section
 class: civit-section
 ---
 
-# 14. Erreurs fréquentes et corrections
+# 13. Erreurs fréquentes et corrections
 
 ---
 hideInToc: true
@@ -2849,7 +2755,7 @@ layout: section
 class: civit-section
 ---
 
-# 15. Glossaire rapide
+# 14. Glossaire rapide
 
 ---
 hideInToc: true
@@ -2918,7 +2824,7 @@ layout: section
 class: civit-section
 ---
 
-# 16. Sources et bibliographie
+# 15. Sources et bibliographie
 
 ---
 hideInToc: true
