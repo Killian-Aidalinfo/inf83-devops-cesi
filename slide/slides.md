@@ -84,11 +84,12 @@ hideInToc: true
   <div class="ch"><span class="n">3</span> Culture DevOps</div>
   <div class="ch"><span class="n">4</span> Git — versionning & évolution applicative</div>
   <div class="ch"><span class="n">5</span> Environnements, mise en prod & maintenance</div>
-  <div class="ch"><span class="n">6</span> Conteneurisation avec Docker</div>
-  <div class="ch"><span class="n">7</span> Pipeline CI/CD</div>
-  <div class="ch"><span class="n">8</span> Tests automatisés</div>
-  <div class="ch"><span class="n">9</span> Supervision & observabilité</div>
-  <div class="ch highlight"><span class="n">10</span> Projet continu 🚀</div>
+  <div class="ch"><span class="n">6</span> Cloud</div>
+  <div class="ch"><span class="n">7</span> Conteneurisation avec Docker</div>
+  <div class="ch"><span class="n">8</span> Pipeline CI/CD</div>
+  <div class="ch"><span class="n">9</span> Tests automatisés</div>
+  <div class="ch"><span class="n">10</span> Supervision & observabilité</div>
+  <div class="ch highlight"><span class="n">11</span> Projet continu 🚀</div>
 </div>
 
 <div class="text-sm opacity-60 mt-5">
@@ -597,13 +598,13 @@ hideInToc: true
 Le DevOps couvre un **écosystème vaste** (cf. *roadmap.sh*). Ce module en prend une **tranche concrète** — le socle du déploiement continu :
 
 <div class="grid grid-cols-3 gap-3 mt-4 text-sm">
-  <div class="rm on">Git & forge</div>
+  <div class="rm on">Git</div>
   <div class="rm on">Conteneurs · Docker</div>
   <div class="rm on">CI/CD</div>
   <div class="rm on">Tests</div>
   <div class="rm on">Supervision</div>
   <div class="rm">Langage de programmation</div>
-  <div class="rm">Cloud</div>
+  <div class="rm on">Cloud</div>
   <div class="rm">IaC (Terraform / Ansible)</div>
   <div class="rm">Orchestration (Kubernetes)</div>
 </div>
@@ -1149,7 +1150,143 @@ layout: section
 class: civit-section
 ---
 
-# 6. Conteneurisation avec Docker
+# 6. Cloud
+## Où tourne l'infrastructure moderne
+
+---
+hideInToc: true
+---
+
+# Les modèles de déploiement ☁️
+
+<div class="grid grid-cols-2 gap-4 text-sm mt-2">
+
+<div class="civit-callout">
+
+### Public
+Infra **mutualisée** d'un fournisseur tiers (AWS, Azure, GCP), à la demande (*multi-tenant*).
+<div class="opacity-60 mt-1">→ démarrage rapide, payé à l'usage</div>
+
+</div>
+
+<div class="civit-callout">
+
+### Privé
+Infra **dédiée** à une seule organisation (datacenter ou hébergée).
+<div class="opacity-60 mt-1">→ plus de contrôle, conformité, souveraineté</div>
+
+</div>
+
+<div class="civit-callout">
+
+### Hybride
+**Public + privé connectés** (VPN/API) : les apps circulent entre les deux.
+<div class="opacity-60 mt-1">→ garder le sensible en privé, déborder sur le public</div>
+
+</div>
+
+<div class="civit-callout">
+
+### Multicloud
+**Plusieurs fournisseurs** à la fois.
+<div class="opacity-60 mt-1">→ éviter la dépendance, prendre le meilleur de chacun</div>
+
+</div>
+
+</div>
+
+---
+hideInToc: true
+---
+
+# Modèles de service : IaaS · PaaS · SaaS
+
+<div class="text-sm">
+
+| Modèle | Le fournisseur gère | Vous gérez | Exemples |
+|---|---|---|---|
+| **IaaS** | matériel, virtualisation, réseau | OS, runtime, **application**, config | AWS EC2, Azure VM, GCE |
+| **PaaS** | + OS, runtime, middleware | **code**, données, accès | Heroku, App Engine, Render |
+| **SaaS** | toute la pile applicative | **usage** + vos données / identités | Slack, Microsoft 365, Figma |
+
+</div>
+
+<div class="civit-callout-fire mt-4 text-sm">
+🔑 <strong>Responsabilité partagée</strong> : d'IaaS vers SaaS, le fournisseur prend en charge de plus en plus de couches (moins à gérer, mais moins de contrôle). Variantes : <strong>FaaS / serverless</strong> (Lambda) et <strong>CaaS</strong> (Kubernetes managé). <strong>Vos données et identités restent toujours votre responsabilité.</strong>
+</div>
+
+---
+hideInToc: true
+---
+
+# Cloud : avantages & points de vigilance
+
+<div class="grid grid-cols-2 gap-5 mt-2">
+
+<div class="civit-callout">
+
+### ✅ Avantages
+- **Élasticité** : scaler en quelques minutes
+- **OPEX vs CAPEX** : payé à l'usage, pas d'achat matériel
+- **Time-to-market** : provisionner en quelques lignes
+- **Portée mondiale** & haute disponibilité
+
+</div>
+
+<div class="civit-callout-fire">
+
+### ⚠️ Points de vigilance
+- **Vendor lock-in** : dépendance à un fournisseur
+- **Coûts difficiles à maîtriser** (84 % des organisations)
+- **Coûts cachés** (egress, services managés)
+- **Souveraineté / dépendance** *(slide suivante)*
+- **Rapatriement** : 21 % des workloads reviennent on-premise
+
+</div>
+
+</div>
+
+<div class="text-xs opacity-50 mt-3">Chiffres : Flexera, State of the Cloud 2025.</div>
+
+---
+hideInToc: true
+---
+
+# Fournisseurs & souveraineté
+
+<div class="grid grid-cols-2 gap-5 text-sm mt-2">
+
+<div class="civit-callout">
+
+### 🇺🇸 Hyperscalers américains
+Au Q4 2025 *(Synergy Research)* :
+- **AWS 28 %** · **Azure 21 %** · **Google Cloud 14 %**
+- → **68 % du cloud public** à eux trois
+- Marché mondial : **419 Md$** en 2025
+
+</div>
+
+<div class="civit-callout">
+
+### 🇪🇺 Acteurs européens
+**OVHcloud · Scaleway · Hetzner · IONOS · Clever Cloud**
+
+Appel d'offres souverain UE (avril 2026) : OVHcloud, Scaleway, S3NS, StackIT. Labels **SecNumCloud**, initiative **Gaia-X**.
+
+</div>
+
+</div>
+
+<div class="civit-callout-fire mt-4 text-sm">
+⚖️ <strong>CLOUD Act (US, 2018) vs RGPD</strong> : les autorités américaines peuvent exiger d'un fournisseur US l'accès à des données <strong>même hébergées en Europe</strong> → enjeu de souveraineté. &nbsp; 🔧 <strong>Lien DevOps</strong> : le cloud se pilote en <strong>Infrastructure as Code</strong> (Terraform, Ansible, OpenTofu) intégrée aux pipelines CI/CD.
+</div>
+
+---
+layout: section
+class: civit-section
+---
+
+# 7. Conteneurisation avec Docker
 
 ---
 hideInToc: true
@@ -1529,7 +1666,7 @@ layout: section
 class: civit-section
 ---
 
-# 7. Pipeline CI/CD
+# 8. Pipeline CI/CD
 
 ---
 hideInToc: true
@@ -1796,7 +1933,7 @@ layout: section
 class: civit-section
 ---
 
-# 8. Tests automatisés
+# 9. Tests automatisés
 ## Livrer vite **sans** livrer des bugs
 
 ---
@@ -1948,7 +2085,7 @@ layout: section
 class: civit-section
 ---
 
-# 9. Supervision et observabilité
+# 10. Supervision et observabilité
 ## Savoir ce qui se passe **en production**
 
 ---
@@ -2169,7 +2306,7 @@ layout: section
 class: civit-section
 ---
 
-# 10. Projet continu
+# 11. Projet continu
 ## Déployer un projet existant
 
 ---
@@ -2460,7 +2597,7 @@ layout: section
 class: civit-section
 ---
 
-# 11. Exercices courts à insérer pendant le cours
+# 12. Exercices courts à insérer pendant le cours
 
 ---
 hideInToc: true
@@ -2554,7 +2691,7 @@ layout: section
 class: civit-section
 ---
 
-# 12. Antisèches
+# 13. Antisèches
 
 ---
 hideInToc: true
@@ -2640,7 +2777,7 @@ layout: section
 class: civit-section
 ---
 
-# 13. Erreurs fréquentes et corrections
+# 14. Erreurs fréquentes et corrections
 
 ---
 hideInToc: true
@@ -2681,7 +2818,7 @@ layout: section
 class: civit-section
 ---
 
-# 14. Glossaire rapide
+# 15. Glossaire rapide
 
 ---
 hideInToc: true
@@ -2750,7 +2887,7 @@ layout: section
 class: civit-section
 ---
 
-# 15. Sources et bibliographie
+# 16. Sources et bibliographie
 
 ---
 hideInToc: true
@@ -2760,7 +2897,8 @@ hideInToc: true
 
 Les schémas de ce support sont **originaux** et ne reprennent pas d'images propriétaires.
 
-<div class="sources text-xs">
+<div class="grid grid-cols-2 gap-x-8 text-xs mt-3">
+<div>
 
 - **[S0]** CESI, *Fiche module INF83*, cahier des charges 2025
 - **[S1][S2]** Git SCM, *Pro Git book*
@@ -2773,6 +2911,10 @@ Les schémas de ce support sont **originaux** et ne reprennent pas d'images prop
 - **[S9]** The Twelve-Factor App
 - **[S10]** CNCF, *Cloud Native Definition*
 - **[S11][S12][S13][S14][S15]** Docker Docs
+
+</div>
+<div>
+
 - **[S16][S17][S18]** GitHub Docs, *GitHub Actions*
 - **[S20]** AWS, *Deployment strategies*
 - **[S21]** Google Cloud, *Canary deployment*
@@ -2783,13 +2925,10 @@ Les schémas de ce support sont **originaux** et ne reprennent pas d'images prop
 - **[S28]** M. Fowler, *Test Pyramid* / *Practical Test Pyramid*
 - **[S29]** Google, *Site Reliability Engineering* (Golden Signals, SLI/SLO)
 - **[S30]** Prometheus, Grafana, Grafana Loki & K6 Docs
+- **[S31]** Synergy Research, *Cloud market share Q4 2025*
 
 </div>
-
-<style>
-.sources ul { columns: 2; column-gap: 2.2rem; }
-.sources li { break-inside: avoid; margin: 0.12em 0; list-style: none; }
-</style>
+</div>
 
 ---
 layout: cover
