@@ -1707,6 +1707,84 @@ Autres outils du même esprit : <code>npm audit</code> / <code>pip-audit</code> 
 hideInToc: true
 ---
 
+# Le reverse proxy : à quoi ça sert ? 🔀
+
+Un **reverse proxy** se place **devant vos services** : il reçoit tout le trafic entrant sur un **point d'entrée unique** (ports 80/443) et le **route vers le bon conteneur** selon le **domaine** ou le **chemin**.
+
+<div class="grid grid-cols-2 gap-5 text-sm mt-3">
+
+<div class="civit-callout-fire">
+
+### Sans reverse proxy
+- chaque service sur un **port brut** (`:3000`, `:8080`…)
+- HTTPS à gérer **service par service**
+- conteneurs **exposés directement**
+
+</div>
+
+<div class="civit-callout">
+
+### Avec reverse proxy
+- **un seul point d'entrée** (80/443)
+- **routage par domaine** : `app.exemple.fr` → bon conteneur
+- **TLS / HTTPS centralisé** (certificats Let's Encrypt)
+- load balancing, cache, logs, *rate limiting*
+
+</div>
+
+</div>
+
+<div class="text-sm opacity-70 mt-3">
+À ne pas confondre avec un <em>proxy (forward)</em> qui relaie le trafic <strong>sortant</strong> des clients : le reverse proxy gère le trafic <strong>entrant</strong> vers les serveurs.
+</div>
+
+---
+hideInToc: true
+---
+
+# Reverse proxy : Nginx, Traefik ou Caddy ? ⚖️
+
+<div class="grid grid-cols-3 gap-4 text-sm mt-2">
+
+<div class="civit-callout">
+
+### Nginx *(~65 %)*
+- La **référence**, ultra-éprouvée
+- **Performances** max, faible mémoire
+- Config **statique** (verbeuse)
+
+</div>
+
+<div class="civit-callout">
+
+### Traefik *(~22 %)*
+- **Cloud-native** : découverte **automatique** des services Docker / K8s (labels)
+- **HTTPS auto** + dashboard
+- Idéal setups **dynamiques**
+
+</div>
+
+<div class="civit-callout">
+
+### Caddy *(~13 %)*
+- **Simplicité** maximale
+- **HTTPS automatique** par défaut
+- Config minimale (`Caddyfile`)
+
+</div>
+
+</div>
+
+<div class="civit-callout-fire mt-4 text-sm">
+👉 En dessous de ~10 000 req/s, choisissez selon le <strong>confort de configuration</strong>, pas la performance. <em>(HAProxy reste une référence pour le load balancing pur.)</em>
+</div>
+
+<div class="text-xs opacity-50 mt-2">Sources : comparatifs reverse proxy Nginx / Traefik / Caddy (2025–2026).</div>
+
+---
+hideInToc: true
+---
+
 # Exposer proprement : reverse proxy
 
 En production, on ne publie pas chaque conteneur sur un port brut. Un **reverse proxy** (Traefik, Nginx, Caddy) centralise l'entrée du trafic :
