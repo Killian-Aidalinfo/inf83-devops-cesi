@@ -1,0 +1,52 @@
+name: Deploy slides to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: slide
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # devDeps inutiles pour le build (évite le téléchargement de Chromium par Playwright)
+      - run: npm ci --omit=dev
+
+      - name: Build du cours principal
+        run: npx slidev build slides.md --base /inf83-devops-cesi/ --out dist
+
+      - name: Build du parcours TP (sous /tp/)
+        run: npx slidev build slides-tp.md --base /inf83-devops-cesi/tp/ --out dist/tp
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: slide/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
