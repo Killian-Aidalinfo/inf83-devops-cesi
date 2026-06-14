@@ -149,10 +149,11 @@ hideInToc: true
 
 <div class="civit-callout mt-12">
 
-### Me retrouver
+### Au quotidien
 
-- 📧 killian.stein@aidalinfo.fr
-- 🐳 Docker, CI/CD, supervision, Cloud (Scaleway, OVH…)
+- 🐳 Docker, CI/CD, supervision
+- ☁️ Cloud (Scaleway, OVH…)
+- 🔧 DevOps / SRE / automatisation
 
 </div>
 
@@ -576,6 +577,67 @@ La méthodologie **Twelve-Factor App** propose des principes pour rendre une app
 | Processus stateless | Éviter de stocker l'état applicatif dans le conteneur. |
 | Logs en flux | Écrire sur stdout/stderr, agréger ensuite. |
 | Parité dev/prod | Limiter les différences entre local, staging et prod. |
+
+</div>
+
+---
+hideInToc: true
+---
+
+# Roadmap DevOps 🗺️
+
+Le DevOps couvre un **écosystème vaste** (cf. *roadmap.sh*). Ce module en prend une **tranche concrète** — le socle du déploiement continu :
+
+<div class="grid grid-cols-3 gap-3 mt-4 text-sm">
+  <div class="rm on">Git & forge</div>
+  <div class="rm on">Conteneurs · Docker</div>
+  <div class="rm on">CI/CD</div>
+  <div class="rm on">Tests</div>
+  <div class="rm on">Supervision</div>
+  <div class="rm">Langage de programmation</div>
+  <div class="rm">Cloud</div>
+  <div class="rm">IaC (Terraform / Ansible)</div>
+  <div class="rm">Orchestration (Kubernetes)</div>
+</div>
+
+<div class="civit-callout-fire mt-5 text-sm">
+🎯 Le DevOps a aussi donné naissance à des <strong>métiers spécialisés</strong> : DevSecOps, FinOps, MLOps… — ce module pose le <strong>socle commun</strong>.
+</div>
+
+<style>
+.rm { border:1px solid rgba(14,165,233,0.22); border-radius:10px; padding:0.55rem 0.85rem; background:rgba(14,165,233,0.04); color:var(--civit-muted); }
+.rm.on { border-color:var(--civit-blue); background:rgba(14,165,233,0.12); color:var(--civit-navy); font-weight:700; }
+.rm.on::before { content:"✓ "; color:var(--civit-blue-dark); }
+</style>
+
+---
+hideInToc: true
+---
+
+# Open source & DevOps 🔓
+
+La culture DevOps est **étroitement liée à l'open source** : elles partagent les mêmes valeurs — **transparence, collaboration, partage**.
+
+<div class="grid grid-cols-2 gap-5 mt-4">
+
+<div class="civit-callout">
+
+### Pourquoi c'est essentiel
+- **Innovation rapide** et transparence
+- **Collaboration** entre communautés → des outils qui évoluent en continu
+- **Interopérabilité**, pas de dépendance à un seul fournisseur (*no vendor lock-in*)
+- Des infrastructures plus **flexibles, maîtrisables et durables**
+
+</div>
+
+<div class="civit-callout-fire">
+
+### Dans ce cours
+Presque tous nos outils sont **open source** :
+
+**Git · Docker · GitHub Actions · Trivy · Prometheus · Grafana**
+
+</div>
 
 </div>
 
