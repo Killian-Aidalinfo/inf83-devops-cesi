@@ -1278,7 +1278,7 @@ Appel d'offres souverain UE (avril 2026) : OVHcloud, Scaleway, S3NS, StackIT. La
 </div>
 
 <div class="civit-callout-fire mt-4 text-sm">
-⚖️ <strong>CLOUD Act (US, 2018) vs RGPD</strong> : les autorités américaines peuvent exiger d'un fournisseur US l'accès à des données <strong>même hébergées en Europe</strong> → enjeu de souveraineté. &nbsp; 🔧 <strong>Lien DevOps</strong> : le cloud se pilote en <strong>Infrastructure as Code</strong> (Terraform, Ansible, OpenTofu) intégrée aux pipelines CI/CD.
+⚖️ <strong>CLOUD Act (US, 2018) vs RGPD</strong> : les autorités américaines peuvent exiger d'un fournisseur US l'accès à des données <strong>même hébergées en Europe</strong> → enjeu de souveraineté.
 </div>
 
 ---
