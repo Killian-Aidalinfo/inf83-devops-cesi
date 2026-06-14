@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "slidev slides.md",
     "build": "slidev build slides.md",
-    "export": "slidev export slides.md"
+    "export": "slidev export slides.md",
+    "dev:tp": "slidev slides-tp.md --port 3031",
+    "build:tp": "slidev build slides-tp.md -o dist-tp",
+    "export:tp": "slidev export slides-tp.md"
   },
   "dependencies": {
     "@slidev/cli": "^51.0.0",

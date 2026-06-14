@@ -9,12 +9,20 @@
   --civit-navy-soft: #f1f5f9;
   --civit-blue: #0ea5e9;
   --civit-blue-dark: #0369a1;
-  --civit-fire: #f97316;
-  --civit-fire-soft: #fb923c;
+  /* Pas d'orange : "fire" devient le bleu secondaire (teal du site) */
+  --civit-fire: #1971a0;
+  --civit-fire-soft: #38bdf8;
   --civit-text: #0b1220;
   --civit-muted: #64748b;
 
   --slidev-theme-primary: var(--civit-blue);
+}
+
+/* Masque le dialog "Go to" de Slidev (touche g) qui restait ouvert
+   en panneau blanc sur la droite. Élément du visualiseur uniquement,
+   absent de l'export PDF/build. */
+#slidev-goto-dialog {
+  display: none !important;
 }
 
 /* Slide base */
@@ -57,7 +65,7 @@
 
 .slidev-layout blockquote {
   border-left: 4px solid var(--civit-fire);
-  background: rgba(249, 115, 22, 0.06);
+  background: rgba(25, 113, 160, 0.06);
   padding: 0.6em 1em;
   border-radius: 0 6px 6px 0;
 }
@@ -81,6 +89,7 @@
 .civit-footer {
   position: fixed;
   left: 1.2rem;
+  right: 1.2rem;
   bottom: 0.6rem;
   display: flex;
   align-items: center;
@@ -90,6 +99,12 @@
   opacity: 0.85;
   z-index: 10;
   pointer-events: none;
+}
+
+/* Numéro de page poussé à l'extrême droite */
+.civit-footer .page {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
 }
 
 .civit-footer .logo {
@@ -110,7 +125,7 @@
 .civit-section {
   background:
     radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.14) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(249, 115, 22, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(25, 113, 160, 0.12) 0%, transparent 50%),
     #ffffff;
 }
 
@@ -135,5 +150,33 @@
   border: 1px solid var(--civit-fire);
   border-radius: 10px;
   padding: 0.8em 1.2em;
-  background: rgba(249, 115, 22, 0.06);
+  background: rgba(25, 113, 160, 0.08);
+}
+
+/* Sommaire auto-généré (composant <Toc>) */
+.civit-toc {
+  column-gap: 3rem;
+}
+
+.civit-toc .slidev-toc-item {
+  margin: 0.45em 0;
+  line-height: 1.3;
+}
+
+.civit-toc a,
+.civit-toc .slidev-toc-link {
+  color: var(--civit-navy);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.15s ease;
+}
+
+.civit-toc a:hover,
+.civit-toc .slidev-toc-link:hover {
+  color: var(--civit-fire);
+}
+
+.civit-toc .slidev-toc-item-active > a,
+.civit-toc .slidev-toc-item-active > .slidev-toc-link {
+  color: var(--civit-blue-dark);
 }

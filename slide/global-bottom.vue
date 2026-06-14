@@ -3,9 +3,8 @@
     <img src="/civilisationit-logo.svg" class="w-3.5 h-3.5" />
     <span class="logo">Civilisation<span class="it">IT</span></span>
     <span class="sep">·</span>
-    <span>INF83 - Déploiement continu DevOps</span>
-    <span class="sep">·</span>
-    <span>civilisation-it.fr</span>
+    <span>{{ $slidev.configs.title }}</span>
+    <span class="page">{{ $slidev.nav.currentPage }}/{{ $slidev.nav.total }}</span>
   </div>
 </template>
 
