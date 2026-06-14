@@ -1315,10 +1315,12 @@ Le conteneur n'est pas né avec Docker : c'est l'aboutissement de 30 ans d'isola
 
 | Année | Étape | Apport |
 |---|---|---|
-| **1979** | `chroot` | Première isolation : un processus voit un autre répertoire racine. |
-| **2006** | `cgroups` + `namespaces` (Linux) | **Limiter** les ressources (CPU, RAM) et **isoler** les espaces réseau / FS / processus. |
-| **2013** | **Docker** | Démocratisation : images + `Dockerfile` + `registry`, expérience développeur ultra-simple. |
-| **2015** | **OCI** + **Kubernetes** | Standardisation des formats et industrialisation de l'orchestration à grande échelle. |
+| **1979** | `chroot` (Unix) | Première isolation du **système de fichiers**. |
+| **2000** | **FreeBSD Jails** | Isolation complète d'un environnement (FS, réseau, processus). |
+| **2004** | **Solaris Zones** | Conteneurs au niveau OS, côté systèmes commerciaux. |
+| **2008** | **LXC** — `cgroups` + `namespaces` | Premiers conteneurs **Linux** modernes : **limiter** + **isoler**. |
+| **2013** | **Docker** | Démocratisation : images + `Dockerfile` + `registry`. |
+| **2015** | **OCI** + **Kubernetes** | Standardisation des formats + orchestration à grande échelle. |
 
 </div>
 
