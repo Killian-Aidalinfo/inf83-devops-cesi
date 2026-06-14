@@ -328,7 +328,7 @@ hideInToc: true
 
 <div class="civit-callout mt-12 inline-block text-left">
 
-**Parcours TP préparé par CivilisationIT**
+**Parcours TP préparé par Killian STEIN**
 
 Intervenant CESI — module INF83
 </div>

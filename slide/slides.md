@@ -9,7 +9,7 @@ info: |
   ## INF83 - Déploiement continu DevOps
   Versionning, culture DevOps, conteneurisation, CI/CD et mise en production automatisée.
 
-  Support de cours - CESI - par CivilisationIT
+  Support de cours - CESI - par Killian STEIN
 class: text-left
 drawings:
   persist: false
@@ -66,7 +66,7 @@ Versionning, culture DevOps, conteneurisation, CI/CD<br>et mise en production au
 </div>
 
 <div class="abs-bottom-12 left-12 text-sm opacity-70">
-  Support pédagogique préparé par <strong>CivilisationIT</strong><br>
+  Support pédagogique préparé par <strong>Killian STEIN</strong><br>
   Intervenant CESI
 </div>
 
@@ -2800,7 +2800,7 @@ hideInToc: true
 
 <div class="civit-callout mt-12 inline-block text-left">
 
-**Support préparé par CivilisationIT**
+**Support préparé par Killian STEIN**
 
 Intervenant CESI — module INF83
 </div>
