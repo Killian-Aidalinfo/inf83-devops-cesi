@@ -635,7 +635,9 @@ La culture DevOps est **étroitement liée à l'open source** : elles partagent 
 ### Dans ce cours
 Presque tous nos outils sont **open source** :
 
-**Git · Docker · GitHub Actions · Trivy · Prometheus · Grafana**
+**Git · Docker · Trivy · Prometheus · Grafana · K6**
+
+<div class="text-sm opacity-70 mt-2">⚠️ <strong>GitHub Actions</strong>, lui, est <strong>propriétaire</strong> — mais il orchestre des outils open source.</div>
 
 </div>
 
