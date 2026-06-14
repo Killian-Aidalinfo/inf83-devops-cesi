@@ -1124,7 +1124,6 @@ hideInToc: true
 - Suivre les logs de déploiement.
 - Vérifier la santé du service : endpoint `/health`, statut conteneur, réponse HTTP.
 - Surveiller erreurs, latence, consommation CPU/RAM.
-- Noter l'heure exacte et la version déployée.
 
 </div>
 </div>
@@ -1135,7 +1134,6 @@ hideInToc: true
 
 <div class="civit-callout-fire space-y-2 text-sm">
 
-- Exécuter un smoke test.
 - Mettre à jour le changelog ou la release note.
 - Créer un ticket d'incident si un contournement a été nécessaire.
 - Débriefer les irritants du déploiement.
