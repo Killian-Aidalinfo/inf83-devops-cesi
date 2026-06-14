@@ -74,7 +74,7 @@ Versionning, culture DevOps, conteneurisation, CI/CD<br>et mise en production au
 hideInToc: true
 ---
 
-# Le programme de la semaine 🗓️
+# Le programme de la semaine <span class="title-emoji">📅</span>
 
 <div class="text-lg opacity-60 -mt-1 mb-5">Cinq jours, du premier commit à la mise en production automatisée.</div>
 
@@ -96,6 +96,14 @@ hideInToc: true
 </div>
 
 <style>
+/* Emoji du titre : couleur native (hors dégradé) + plus gros = plus visible */
+.title-emoji {
+  -webkit-text-fill-color: initial;
+  background: none;
+  font-size: 1.25em;
+  vertical-align: -0.08em;
+  margin-left: 0.15em;
+}
 .chapters-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
