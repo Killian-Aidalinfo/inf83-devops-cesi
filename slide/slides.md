@@ -61,6 +61,10 @@ Versionning, culture DevOps, conteneurisation, CI/CD<br>et mise en production au
   <span class="px-3 py-1 rounded-full civit-callout text-sm">CESI : CDA</span>
 </div>
 
+<div class="pt-4 text-sm">
+  <a href="https://killian-aidalinfo.github.io/inf83-devops-cesi/tp/" target="_blank" class="text-civit-blue">→ Parcours TP (créneaux libres)</a>
+</div>
+
 <div class="abs-bottom-12 left-12 text-sm opacity-70">
   Support pédagogique préparé par <strong>CivilisationIT</strong><br>
   Intervenant CESI

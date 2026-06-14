@@ -73,6 +73,10 @@ Sur les **créneaux libres** des 5 jours — 1 h / 2 h / 3 h — chaque TP ajout
   <span class="px-3 py-1 rounded-full civit-callout-fire text-sm ml-2">5 jours · créneaux libres</span>
 </div>
 
+<div class="pt-4 text-sm">
+  <a href="https://killian-aidalinfo.github.io/inf83-devops-cesi/" target="_blank" class="text-civit-blue">← Cours INF83 — Déploiement continu</a>
+</div>
+
 ---
 hideInToc: true
 ---

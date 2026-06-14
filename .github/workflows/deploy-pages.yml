@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+# Exécute les actions sur Node 24 (les @v4 tournent encore sur Node 20 sinon)
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Un seul déploiement à la fois
 concurrency:
   group: pages

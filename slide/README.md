@@ -1,8 +1,7 @@
-# INF83 - Déploiement continu DevOps — Slides
+# INF83 — Déploiement continu DevOps — Slides
 
-Présentation [Slidev](https://sli.dev) du support de cours **INF83 - Déploiement continu DevOps** (CESI), générée à partir de `../INF83_support_deploiement_continu_devops.md`.
-
-Identité visuelle aux couleurs de [CivilisationIT](https://civilisation-it.fr).
+Deux présentations [Slidev](https://sli.dev) du module **INF83 — Déploiement continu DevOps** (CESI) : le **cours** et le **parcours de TP**.
+En ligne : <https://killian-aidalinfo.github.io/inf83-devops-cesi/> · TP : <https://killian-aidalinfo.github.io/inf83-devops-cesi/tp/>
 
 ## Installation
 
@@ -10,32 +9,31 @@ Identité visuelle aux couleurs de [CivilisationIT](https://civilisation-it.fr).
 npm install
 ```
 
-## Lancer le mode présentation (avec rechargement à chaud)
+## Mode présentation (rechargement à chaud)
 
 ```bash
-npm run dev
+npm run dev      # cours principal → http://localhost:3030
+npm run dev:tp   # parcours TP     → http://localhost:3031
 ```
 
-Puis ouvrir <http://localhost:3030>.
+Les deux peuvent tourner en parallèle (ports différents).
 
-## Export PDF
-
-```bash
-npm run export
-```
-
-## Build statique (pour déploiement web)
+## Export PDF / Build statique
 
 ```bash
-npm run build
+npm run export     # cours principal
+npm run export:tp  # parcours TP
+npm run build      # build statique du cours
+npm run build:tp   # build statique du parcours TP (dossier dist-tp/)
 ```
 
 ## Structure
 
-- `slides.md` — toutes les diapositives (13 sections du cours + couverture, sommaire et clôture)
-- `style.css` — charte graphique CivilisationIT (couleurs, badges, callouts)
-- `global-bottom.vue` — pied de page de marque affiché sur chaque diapositive
-- `public/images/` — schémas originaux du support (boucle DevOps, cycle Git, pipeline CI/CD, conteneurisation, stratégies de déploiement)
+- `slides.md` — le cours principal (couverture, programme, 10 chapitres + annexes).
+- `slides-tp.md` — le parcours de petits TP qui s'assemblent (créneaux libres des 5 jours).
+- `style.css` — charte graphique (bleu CivilisationIT).
+- `global-bottom.vue` — pied de page de marque (titre dynamique selon le deck).
+- `public/images/` — schémas restants en image (les principaux sont en SVG dans `slides.md`).
 
 ## Raccourcis Slidev utiles en présentation
 
