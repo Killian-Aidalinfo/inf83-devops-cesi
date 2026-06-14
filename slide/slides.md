@@ -2601,29 +2601,6 @@ const steps = [
 </script>
 
 ---
-hideInToc: true
----
-
-# Grille d'évaluation formative
-
-<div class="text-sm">
-
-| Critère | Points | Observables |
-|---|---:|---|
-| Git et collaboration | 15 | Branches, commits lisibles, MR, résolution de conflit, historique propre. |
-| Documentation | 10 | README, changelog, procédures déploiement/incident, variables documentées. |
-| Conteneurisation | 20 | Dockerfile fonctionnel, image reproductible, Compose si nécessaire, pas de secrets. |
-| Pipeline CI/CD | 20 | Stages cohérents, tests bloquants, image/artefact produit, variables sécurisées. |
-| Tests et sécurité | 10 | Tests unitaires/intégration en CI, scan d'image, smoke test, seuils K6. |
-| Supervision | 10 | Healthcheck, logs accessibles, une métrique visualisée, une alerte décrite. |
-| Déploiement et rollback | 10 | Staging déployé, smoke test, rollback décrit ou testé. |
-| Compréhension DevOps | 5 | Capacité à expliquer CALMS, CI/CD, environnement, métriques et risques. |
-
-</div>
-
-<div class="text-right font-bold mt-4 text-civit-blue">Total : 100 points</div>
-
----
 layout: section
 class: civit-section
 ---
@@ -2689,25 +2666,6 @@ docker compose ps
 docker compose logs -f
 docker compose down
 ```
-
----
-hideInToc: true
----
-
-# Questions à se poser avant de merger
-
-<div class="civit-callout space-y-2 text-lg mt-6">
-
-- Le code est-il testé ?
-- La pipeline est-elle verte ?
-- Le changement est-il documenté ?
-- Le rollback est-il possible ?
-- Les secrets sont-ils absents du diff ?
-- Le changement modifie-t-il une API publique ?
-- Faut-il incrémenter la version ?
-- Faut-il prévenir les utilisateurs ou l'exploitation ?
-
-</div>
 
 ---
 layout: section
@@ -2838,31 +2796,31 @@ Les schémas de ce support sont **originaux** et ne reprennent pas d'images prop
 <div>
 
 - **[S0]** CESI, *Fiche module INF83*, cahier des charges 2025
-- **[S1][S2]** Git SCM, *Pro Git book*
-- **[S3]** GitHub Docs, *GitHub flow*
-- **[S4]** Conventional Commits 1.0.0
-- **[S5]** Semantic Versioning 2.0.0
-- **[S6]** Keep a Changelog 1.1.0
-- **[S7]** Atlassian, *CALMS Framework*
-- **[S8]** DORA, *Software delivery performance metrics*
-- **[S9]** The Twelve-Factor App
-- **[S10]** CNCF, *Cloud Native Definition*
-- **[S11][S12][S13][S14][S15]** Docker Docs
+- **[S1][S2]** [Git SCM — *Pro Git book*](https://git-scm.com/book)
+- **[S3]** [GitHub Docs — *GitHub flow*](https://docs.github.com/get-started/using-github/github-flow)
+- **[S4]** [Conventional Commits 1.0.0](https://www.conventionalcommits.org)
+- **[S5]** [Semantic Versioning 2.0.0](https://semver.org)
+- **[S6]** [Keep a Changelog 1.1.0](https://keepachangelog.com)
+- **[S7]** [Atlassian — *CALMS Framework*](https://www.atlassian.com/devops/frameworks/calms-framework)
+- **[S8]** [DORA — *metrics*](https://dora.dev)
+- **[S9]** [The Twelve-Factor App](https://12factor.net)
+- **[S10]** [CNCF — *Cloud Native Definition*](https://github.com/cncf/toc/blob/main/DEFINITION.md)
+- **[S11–S15]** [Docker Docs](https://docs.docker.com)
 
 </div>
 <div>
 
-- **[S16][S17][S18]** GitHub Docs, *GitHub Actions*
-- **[S20]** AWS, *Deployment strategies*
-- **[S21]** Google Cloud, *Canary deployment*
-- **[S22]** Kubernetes Docs, *Rolling Update*
-- **[S23]** OWASP, *DevSecOps Guideline*
-- **[S24][S25][S26]** OpenClassrooms
+- **[S16–S18]** [GitHub Docs — *GitHub Actions*](https://docs.github.com/actions)
+- **[S20]** [AWS — *Deployment strategies*](https://aws.amazon.com/builders-library/)
+- **[S21]** [Google Cloud — *Deployment strategies*](https://cloud.google.com/deploy/docs/deployment-strategies)
+- **[S22]** [Kubernetes — *Rolling Update*](https://kubernetes.io/docs/tutorials/kubernetes-basics/update/update-intro/)
+- **[S23]** [OWASP — *DevSecOps Guideline*](https://owasp.org/www-project-devsecops-guideline/)
+- **[S24–S26]** [OpenClassrooms](https://openclassrooms.com)
 - **[S27]** ScholarVox, *Learning DevOps*
-- **[S28]** M. Fowler, *Test Pyramid* / *Practical Test Pyramid*
-- **[S29]** Google, *Site Reliability Engineering* (Golden Signals, SLI/SLO)
-- **[S30]** Prometheus, Grafana, Grafana Loki & K6 Docs
-- **[S31]** Synergy Research, *Cloud market share Q4 2025*
+- **[S28]** [M. Fowler — *Practical Test Pyramid*](https://martinfowler.com/articles/practical-test-pyramid.html)
+- **[S29]** [Google — *Site Reliability Engineering*](https://sre.google/books/)
+- **[S30]** [Prometheus](https://prometheus.io) · [Grafana](https://grafana.com) · [K6](https://k6.io)
+- **[S31]** [Synergy Research — *Cloud Q4 2025*](https://www.srgresearch.com)
 
 </div>
 </div>
@@ -2880,7 +2838,7 @@ hideInToc: true
 
 # Merci !
 
-## Questions, pratique, et place au projet continu 🚀
+## Questions, échanges et place à la pratique 🚀
 
 <div class="civit-callout mt-12 inline-block text-left">
 
