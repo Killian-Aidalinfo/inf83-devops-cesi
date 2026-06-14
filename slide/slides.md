@@ -527,8 +527,47 @@ Le DevOps est d'abord un **mouvement culturel**, né pour casser le mur entre De
 
 </div>
 
+---
+hideInToc: true
+---
+
+# Les piliers du DevOps 🏛️
+
+<div class="text-base opacity-60 -mt-1 mb-4">Le DevOps hérite de plusieurs courants qui partagent les mêmes valeurs.</div>
+
+<div class="grid grid-cols-3 gap-4">
+
+<div class="civit-callout">
+
+### Lean *(Toyota)*
+- Réduire le **gaspillage** (humain, technique, matériel)
+- **Amélioration continue**
+- **Flux** optimisé
+
+</div>
+
+<div class="civit-callout">
+
+### Agile *(2001)*
+- **Collaboration**
+- **Livraison fréquente**
+- **Feedback rapide**
+
+</div>
+
+<div class="civit-callout">
+
+### SRE *(Google, 2003)*
+- **Fiabilité mesurable**
+- **Automatisation** poussée
+- L'exploitation conçue par des devs
+
+</div>
+
+</div>
+
 <div class="civit-callout-fire mt-4 text-sm">
-🏛️ <strong>Fondations</strong> : <strong>Lean</strong> (Toyota — réduire le gaspillage, amélioration continue), <strong>Agile</strong> (collaboration, livraison fréquente) et la culture <strong>SRE</strong> de Google (fiabilité mesurable, automatisation poussée).
+💡 La culture <strong>SRE</strong> (B. Treynor Sloss, Google) : confier l'exploitation à des ingénieurs logiciel, qui <strong>automatisent tout ce qui est répétitif</strong> au lieu de le subir.
 </div>
 
 ---
