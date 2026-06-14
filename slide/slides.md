@@ -1325,7 +1325,7 @@ Le conteneur n'est pas né avec Docker : c'est l'aboutissement de 30 ans d'isola
 </div>
 
 <div class="civit-callout mt-6 text-sm">
-Un conteneur, techniquement = des <strong>namespaces</strong> (ce que le processus <em>voit</em>) + des <strong>cgroups</strong> (ce qu'il <em>consomme</em>). Docker n'a rien inventé de ce socle : il l'a rendu utilisable.
+Un conteneur, techniquement = des <strong>namespaces</strong> (ce que le processus <em>voit</em>) + des <strong>cgroups</strong> (ce qu'il <em>consomme</em>). Docker n'a rien inventé de ce socle : il a rendu la conteneurisation accessible.
 </div>
 
 ---
